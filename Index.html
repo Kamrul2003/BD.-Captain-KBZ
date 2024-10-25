@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="Drop-menu.css"/>
+</head>
+<body>
+  <iframe src="mywebsite/Index.html"></iframe>
+    <div class="top">
+      <p>BD. CAPTAIN KBZ</p>
+        <button class="menu-btn" onclick="openMenu(this)">❖</button>
+    </div>
+  <nav class="nav">
+    <ul class="list">
+      <i id="tag">BD. CAPTAIN KBZ</i>
+        <li><a href="Mywebsite/Home-page.html">Home</a></li>
+        <li><a href="Mywebsite/About.html">About</a></li>
+        <li><a href="Mywebsite/contact.html">Contact</a></li>
+        <li><a href="Mywebsite/Login.html">Sign in</a></li>
+        
+    </ul>
+</nav>
+
+
+
+
+<!-- Javascript code -->
+
+
+<script>
+    function openMenu(e) {
+        var menuList = document.querySelector(".nav .list");
+        if (e.innerHTML == "❖") {
+            e.innerHTML = "☲";
+            menuList.style.display = "block";
+        } else {
+            e.innerHTML = "❖";
+            menuList.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
