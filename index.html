@@ -1,35 +1,50 @@
+
 <!DOCTYPE html>
-<html>
+<html: lan="en">
   <head>
-     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-     <meta name="" content="">
-     <link rel="stylesheet" type="text/css" href="App-home-page.css"/>
-     <title> App Home Page </title>
-  </head>
-  <body><center>
-    <p class="header" style="font-size:2cm">ভেরিফিকেশন এর নিয়ম।</p>
-    </br>
-    <p style="font-size:40px;">
-       প্রিয় ইউজার, আমাদের এজেন্সিতে নতুন মেম্বার যোগ করার মাধ্যমে আপনি টাকা ইনকাম করতে পারেন।
-      ১ জন  ভেরিফাইড মেম্বার এর জন্য আপনি ৫০ টাকা পর্যন্ত পেতে পারেন। আপনি যত খুশী নতুন মেম্বার যোগ করতে পারবেন।
-    </p>
-    </center>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <title> user signup Page </title>
+    <link rel="stylesheet" type="text/css" href="Verify-user-id.css"/>
+  </head> 
+  <body1 style="font-size:13px; color:red;">
+    <h1>ভেরিফাই নির্দেশনা।</h1>
+  1. আপনি যে নাম দিয়ে নিবন্ধন করেছেন তা প্রধান করুন।</br>
+  2. আপনি যে ই-মেল দিয়ে নিবন্ধন করেছেন তা প্রধান করুন।</br>
+  3. আপনি যার মাধ্যমে নিবন্ধন করেছেন তার আইডি কোড প্রধান করুন।</br>
+  4. আপনার পেমেন্ট মেথড বিকাশ,রকেট, নগদ কোনটি তা প্রধান করুন।</br>
+  5. আপনি যে নাম্বার থেকে পেমেন্ট করেছেন তা প্রধান করুন।</br>
+  6. আপনার পেমেন্ট ট্রানজেকশন আইডি দিন।</br>
+  <body1>
     
-    <br><br>
-      
-    <p style="font-size:40px;color:red;position:relative; left: 4%;">
-   1. আপনার ভেরিফিকেশন সেন্ড করার আগে ভালোকরে পরে<br> দেখুন ভুল আছে কি নাই।<br><br>
-   2. তথ্য ভুল হলে ভেরিফিকেশন হবে না।<br><br>
-    3.ভেরিফিকেশন সেন্ড করার ১০মিনিট থেকে ১ঘন্টার মধ্যে <br> আপনাকে আইডি কোড সহ একটি ই-মেইল করা হবে।<br><br>
-    4.ভেরিফিকেশন সেন্ড করার ১০মিনিট থেকে ১ঘন্টার মধ্যে <br> ই-মেইল না পেলে নিচে দেওয়া হোয়াটসঅ্যাপে জানাবেন।<br><br>
-    Thank you.<br>
-    </p><br>
-   <button class="btn1" style="font-size:2cm;"><a style="text-decoration: none; color:#fff;" 
-    href="https://wa.me/message/IARZDNGJAZVBD1"> 
-    WhatsApp </a></button><br><br><br><br><br><br><br><br><br><br>
-  
-  <br><br><br><br><br><br><br><br>
-   <button class="btn2" style="left:70%;position:relative; " ><a style="text-decoration: none; color:#fff;" href="Verify-user-id.html"> Next </a></button>
-  
   </body>
-</html>
+    <form action="https://script.google.com/macros/s/AKfycbzCRwrRMZZ7cLvjiwdbRUfQIS1iojapqy_CumR_I3lWfpGGr3KaTs4zLTJJXuU4PUFxFg/exec" class="Verify-id" method="POST">
+      <h1 style="color:#fff;">Verify your account</h1>
+      <p style="color:red; font-size:20px;">Verify with your real information</p>
+      </br></br>
+      1. Enter user name.
+      <input type="text" name="name"class="name" id="input" placeholder="Username" required>
+      2. Enter user email.
+      <input type="email" name="email"class="email" id="input" placeholder="Email address" required>
+      3. Enter referel ID code.
+      <input type="text" name="rflid_code"class="rflid_code" id="input" placeholder="Referel ID-code" required>
+      4. Select your paymen method.<br>
+      <select name="pmnt_mthd" class="pmnt_mthd"required>
+        <option value="pmnt_mthd"/>Select payment method</option>
+    <option value="BKASH Account"/>BKASH Account</option>
+      <option value="ROCKET Account"/>ROCKET Account</option>
+      <option value="NAGAD Account"/>NAGAD Account</option>
+     </Select>
+   <br>
+      5. Enter payment number.
+      <input type="number" name="pmnt_nmbr"class="pmnt_nmbr" id="input" placeholder="Payment number" required>
+      6. Enter payment trnx ID.
+      <input type="text" name="trnx_id"class="trnx-id" id="input" placeholder="Transaction ID" required>
+      </br></br>
+      <button type="submit">Verify Send</button>
+    <br>
+    </form>
+        
+  </body>
+</html:>
