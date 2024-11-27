@@ -1,0 +1,76 @@
+{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Sans-Serif;
+}
+
+/* Body styleing */
+body {
+  position: center;
+  margin-top: 0;
+  margin-left: 0;
+  background-image: url('bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+
+.menu1 {
+  position: fixed;
+  bottom: -1%;
+  text-align: center;
+
+  .menubtn{
+    text-align: center;
+    font-size:20px;
+    font-weight: 1000;
+    height: 60px;
+    border-radius: 10px;
+  }
+  #btn1 {
+    margin-left: -1.5%;
+    padding-right: 50px;
+    padding-left: 21px;
+  }
+  #btn2 {
+    margin-left: -1.1%;
+    padding-right: 30px;
+    padding-left: 30px;
+    color:#0f0;
+    background: blue;
+  }
+  #btn3 {
+    margin-left: -1.1%;
+    padding-right: 41px;
+    padding-left: 60px;
+  }
+
+  .menubtn:hover {
+    color:#0f0;
+    background: blue;
+  }
+}
+
+.menu2 {
+  position: relative;
+  display: inline-flex;
+  left: 2%;
+  top: 2%;
+}
+.menu-item {
+  text-align: center;
+  border: 1px solid #00f;
+  border-radius: 10px;
+  margin: 3px;
+  background: #fff;
+}
+  #catalog {
+    width: 117px;height: 150px;
+    border-radius: 10px;
+    box-shadow: -10px -10px -10px #eff6dd;
+  }
+
+.user-page
+  position: fixed;
+  top: 0;
+}
