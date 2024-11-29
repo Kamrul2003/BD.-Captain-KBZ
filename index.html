@@ -7,9 +7,36 @@
     <link rel="stylesheet" type="text/css" href="ahp.css"/>
 </head>
   <body>
+    <!.. Top Name ..>
+    <div class="Agency">KBZ. AGENCY BD.</div>
     
-      <div class="home-menu">
-       <h1 style="color:#fff;">Our products</h1><br>
+    
+    <br><br>
+    <!.. Agency Notice ..>
+      <div class="inv"><header>Notice</header>
+        <button onclick="closeMenu(this)">x</button>
+      <p class="invoice">
+      প্রিয় ইউজার, আমাদের এজেন্সিতে নতুন মেম্বার যোগ করার মাধ্যমে আপনি টাকা ইনকাম করতে পারেন।
+      ১ জন  ভেরিফাইড মেম্বার এর জন্য আপনি ৫০ টাকা পর্যন্ত পেতে পারেন। আপনি যত খুশী নতুন মেম্বার যোগ করতে পারবেন।
+    </p></div><br>
+    <!.. Notice Scriptin ..>
+      <script>
+    function closeMenu(e) {
+        var menuList = document.querySelector(".inv");
+        if (e.innerHTML == "x") {
+            menuList.style.display = "none";
+        }}
+            </script>
+            
+       <div class="note"><br>
+         <p>
+           প্রিয় গ্রাহক, আমাদের এজেন্সি থেকে কয়েন বা ডায়মন্ড অর্ডার করতে ক্যাটাগরি থেকে আপনার অ্যাপ্লিকেশন বেছে নেন। অর্ডার করার ২ - ১০ মিনিটের মধ্যে ডেলিভারি দেয়া হয়। যদি কোনো কারণে ডেলিভারি না পাওয়া যায় তাহলে  হোয়াটসঅ্যাপ এ যোগাযোগ করেন।
+         </p>
+         <button id="whatsapp">WhatsApp</button>
+       <br><br>
+       </div><br>
+       
+            <!.. Catalog Items ..>
     <div class="menu2">
       <div class="menu-item">
         <a href="gfhh.hfg" target="_blank"><img id="catalog" src="sm.png"></a>
@@ -25,7 +52,7 @@
         
       </div>
     </div>
-      <!..new div ..>
+      <!..Catalog Items ..>
     
     
     <div class="menu2">
@@ -43,7 +70,7 @@
         
       </div>
     </div>
-        <!..new div ..>
+        <!..Catalog Items ..>
     
     <div class="menu2">
       <div class="menu-item">
@@ -62,7 +89,8 @@
     </div>
     
     
-     <!..new div ..>
+     <!..Catalog Items ..>
+    
     
     <div class="menu2">
       <div class="menu-item">
@@ -79,10 +107,9 @@
         
       </div>
     </div>
-    </div>
+    
     <br><br><br><br><br><br><br><br>
   
-    
     
     <!.....  Menu   button....>
     <div class="menu1">
@@ -114,6 +141,12 @@
       // Redirect to second.html
       window.location.href = 'me-up.html';
     });
+    
+     // JavaScript to handle the navigation
+    document.getElementById('whatsapp').addEventListener('click', function () {
+      // Redirect to second.html
+      window.location.href = 'https://wa.me/message/IARZDNGJAZVBD1';
+    });
 </script>
     
     
@@ -121,4 +154,4 @@
     
     
   </body>
-                                             </html>
+                                                                             </html>
