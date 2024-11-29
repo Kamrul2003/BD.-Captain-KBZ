@@ -9,7 +9,7 @@ body {
   position: center;
   margin-top: 0;
   margin-left: 0;
-  background-image: url('bg.jpg');
+  background-image: url('bg.jpg')
   background-size: cover;
   background-repeat: no-repeat;
   
@@ -19,17 +19,17 @@ body {
    margin-top: -1%;
    margin-left: 0;
    padding-top: 10px;
-   border-bottom: 2px solid red;
+   border-bottom: 5px solid red;
    padding-left: 42px;
    padding-right: 41px;
    text-align:center;
    font-weight:1000; 
    text-shadow:2px 1px 3px blue; 
-   background: #fff;
+   background: #b7f400;
    font-size:1cm;
 }
 
-.inv {
+.inv {display: none;
   position: fixed;
   background-color: indigo;
   padding: 10px;
@@ -71,6 +71,7 @@ body {
   border-radius: 10px;
   p{
     text-align: center;
+    padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     color: #fff;
@@ -93,6 +94,9 @@ body {
   }
 }
 
+.item-header{
+  margin-left: 20%;
+}
 
 /* menu button design */
 .menu1 {
@@ -148,5 +152,18 @@ body {
   #catalog {
     width: 117px;height: 150px;
     border-radius: 10px;
-    box-shadow: -10px -10px -10px #eff6dd;
   }
+.connection {
+  position: center;
+  display: inline-flex;
+  margin-bottom: 50px;
+  margin-left: 15%;
+  .linking{
+    text-align: center;
+    font-weight: 1000;
+    margin: 10px;
+    img{
+    width: 50px;
+    height: 50px;
+  }
+}}
