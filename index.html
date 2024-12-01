@@ -15,11 +15,11 @@
     <p>Sign-in with your right information</p>
     </br></br>
     <p class="error" id="error-message">Invalid user name or password</p>
-    <input type="text"class="input" id="username" placeholder="Email address" required>
-    <input type="password"class="input" id="password" placeholder="Password" required>
+    <input type="text"class="input" id="username" placeholder="Email address" required="fill up this field">
+    <input type="password"class="input" id="password" placeholder="Password" required="fill up this field">
     </br></br>
-    <button type="submit" onclick="login()">Login</button></br>
-    <div class="error" id="error"></div>
+    <button type="submit" onclick="login()">Login</button></br><br>
+    <div class="error" style="color:red;" id="error"></div>
     </br>
 </div>
 
@@ -30,6 +30,7 @@
       { username: "user2", password: "pass2" },
       { username: "user3", password: "pass3" },
       { username: "Kbz", password: "kk" },
+      { username: "kbzmidea05@gmail.com", password:" 123kbz"};
     ];
 
     function login() {
