@@ -1,66 +1,59 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>BD. CAPTAIN KBZ gold coin agency</title>
-    <link rel="stylesheet" type="text/css" href="me-up.css"/>
-</head>
+<html lan="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> user signup Page </title>
+    <link rel="stylesheet" type="text/css" href="tast.css"/>
+  </head> 
   <body>
-    <div class="user-cover">
-      <img class="user-logo" src="id3.png">
-      <div class="user-name">
-          <p>Name: ********</p>
-          <p>ID: ********</p>
-      </div>
-      <div class="user-id">
-          <p></p>
-      </div>
-      <div class="user-blnc">
-         <p class="blnc">Your Earn</p> 
-         <div class="cash"><p id="s">Show</p><p id="b">0.000</p></div> 
-      </div>
-      <div class="user-cashout">
-         <p class="blnc">Request</p> 
-         <div class="cash"><p>Withdrow</p></div> 
- 
-    
-    
-    <!.....  Menu   button....>
-    <div class="menu1">
-      <button  onclick="openAgency(this)"  id="btn1"class="menubtn" >Agency</button>
-      <button onclick="openMenu(this)"  id="btn2"class="menubtn">Home</button>
-      <button onclick="openMe(this)"  id="btn3"class="menubtn">Me</button>
-    </div>
-    
-    
-    
-    
-    <! ..scripting code here....>
-    
-  
-  <script>
-     // JavaScript to handle the navigation
-    document.getElementById('btn1').addEventListener('click', function () {
-      // Redirect to second.html
-      window.location.href = 'Agency.html';
-    });
-    
-    // JavaScript to handle the navigation
-    document.getElementById('btn2').addEventListener('click', function () {
-      // Redirect to second.html
-      window.location.href = 'index.html';
-    });
-    
-     // JavaScript to handle the navigation
-    document.getElementById('btn3').addEventListener('click', function () {
-      // Redirect to second.html
-      window.location.href = 'me-up.html';
-    });
+    <h1>Wellcome back</h1>
+    <form id="login-form" class="registeration-form">
+    <h1>Sign-in</h1>
+    <p>Sign-in with your right information</p>
+    </br></br>
+    <p class="error" id="error-message">Invalid user name or password</p>
+    <input type="text"class="input" id="username" placeholder="Email address" required>
+    <input type="password"class="input" id="password" placeholder="Password" required>
+    </br></br>
+    <button type="submit" onclick="login()">Login</button></br>
+    <div class="error" id="error"></div>
+    </br>
+</form>
+
+<script>
+    // Hardcoded user data
+    const users = [
+      { username: "user1", password: "pass1" },
+      { username: "user2", password: "pass2" },
+      { username: "user3", password: "pass3" },
+      { username: "Kbz", password: "kk" },
+    ];
+
+    function login() {
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      const errorDiv = document.getElementById("error");
+
+      // Clear previous error messages
+      errorDiv.textContent = "";
+
+      // Check if user exists
+      const user = users.find(
+        (user) => user.username === username && user.password === password
+      );
+
+      if (user) {
+        window.location.href = 'ahp.html';
+      } else {
+        errorDiv.textContent = "Invalid username or password.";
+      }
+    }
   </script>
-    
-    
-    
-    
-  </body>
-</html>
+
+
+
+</body>
+   </html>
