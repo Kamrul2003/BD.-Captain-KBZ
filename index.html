@@ -19,7 +19,7 @@
     <input type="password"class="input" id="password" placeholder="Password" required>
     </br></br>
     <button type="submit" onclick="login()">Login</button></br><br>
-    <div class="error" id="error"></div>
+    <div class="error" style="color:red;" id="error"></div>
     </br>
 </div>
 
@@ -36,7 +36,7 @@
     function login() {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
-      const errorDiv = document.getElementById("error").style.color:"red";
+      const errorDiv = document.getElementById("error");
 
       // Clear previous error messages
       errorDiv.textContent = "";
