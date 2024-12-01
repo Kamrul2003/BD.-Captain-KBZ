@@ -14,11 +14,13 @@
     <h1>Sign-in</h1>
     <p>Sign-in with your right information</p>
     </br></br>
-    <div class="error" style="color:red;" id="error"></div>
-    <input type="text"class="input" id="username" placeholder="Email address" required="fill up this field">
-    <input type="password"class="input" id="password" placeholder="Password" required="fill up this field">
+    
+    <input type="text"class="input" id="username" placeholder="Email address" required>
+    <input type="password"class="input" id="password" placeholder="Password" required>
     </br></br>
     <button type="submit" onclick="login()">Login</button></br><br>
+    <div class="error" id="error"></div>
+    </br>
 </div>
 
 <script>
@@ -28,7 +30,7 @@
       { username: "user2", password: "pass2" },
       { username: "user3", password: "pass3" },
       { username: "Kbz", password: "kk" },
-      { username: "kbzmidea05@gmail.com", password:" 123kbz"};
+      { username: "kbzmidea05@gmail.com", password: "mkmk" },
     ];
 
     function login() {
