@@ -36,7 +36,7 @@
     function login() {
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
-      const errorDiv = document.getElementById("error");
+      const errorDiv = document.getElementById("error").style.color:"red";
 
       // Clear previous error messages
       errorDiv.textContent = "";
