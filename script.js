@@ -26,7 +26,7 @@ if (window.location.pathname.includes("dashboard.html")) {
         
     } else {
         // Redirect back to login if no user sessiontc
-        window.location.href = "index.html";
+        window.location.href = "Login.html";
     }
 }
 
@@ -57,7 +57,7 @@ function login() {
 // Logout function
 function logout() {
     localStorage.removeItem("user");
-    window.location.href = "index.html";
+    window.location.href = "Login.html";
 }
 
 const userApp_Admin= document.getElementById("App_Admin")
