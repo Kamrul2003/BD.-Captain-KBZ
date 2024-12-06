@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit to WhatsApp</title>
+    <script>
+        function submitToWhatsApp(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            
+            // Collect form data
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+            const phone = "01612098994"; // Replace with the recipient's WhatsApp number
+            
+            // Format the WhatsApp message
+            const whatsappMessage = `Hello, my name is ${name}. Email: ${email}. Message: ${message}`;
+            
+            // Open WhatsApp with the message pre-filled
+            const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappURL, "_blank");
+            
+            // Redirect to another page after opening WhatsApp
+            window.location.href = "dashboard.html"; // Replace with your desired page
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="submitToWhatsApp(event)">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" required></textarea><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
