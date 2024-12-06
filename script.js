@@ -1,57 +1,71 @@
-// Predefined users data
+// Sample user database
 const users = [
-  { username: "Kbz", password: "k", name: " BD. CAPTAIN KBZ. dhdgsdge", email: "5291", approve: " Verified.", blnc: "2500 TK.", well: "Wellcome", addmin: "Dear, Addministor."},
-  { username: "Siam", password: "kk", name: "MR. KBZ SIAM.", email: "8888", approve: " Verified.", blnc: "2000 TK." , well: "Wellcome", addmin: "Dear, Addministor."},
-  { username: "Sajib", password: "kkk", name: "SAJIB FFL", email: "7555", approve: " Blocked.", blnc: "1500 TK."},
+    { id: "5555", name: "BD. CAPTAIN KBZ.", password: "k", verify: "Verified", blnc:"50 TK", well: "Wellcome", AppAdmin: "Dear, Addministor.", Profile:"pic.png"},
+    { id: "6666", name: "MILON BD. HATIYA", password: "m", verify: "Verified", blnc:"50 TK", well: "Wellcome", AppSubAdmin: "Dear, Sub-Addministor.", 
+    Profile:"id3.png"},
+    { id: "2222", name: "CAPTAIN KBZ BD.", password: "c", verify: "Blocked", blnc:"0.00 TK", well: "Wellcome", AppUser: "Dear, User.", Profile:"setting.png"},
+    { id: "Kbz", name: "KBZ AGENCY BD.", password: "k", verify: "Blocked", blnc:"0.00 TK", well: "Wellcome", AppUser: "Dear, User."},
 ];
 
-// DOM elements
-const loginContainer = document.getElementById("login-container");
-const userDataContainer = document.getElementById("user-data-container");
-const usernameInput = document.getElementById("username");
-const passwordInput = document.getElementById("password");
-const loginBtn = document.getElementById("login-btn");
-const errorMsg = document.getElementById("error-msg");
-const userName = document.getElementById("user-name");
-const userEmail = document.getElementById("user-email");
-const userAge = document.getElementById("user-age");
-const logoutBtn = document.getElementById("logout-btn");
-const userverified = document.getElementById("verify");
-const userwel = document.getElementById("wlcm");
-const userad_min = document.getElementById("admn");
 
-// Login functionality
-loginBtn.addEventListener("click", () => {
-  const username = usernameInput.value.trim();
-  const password = passwordInput.value.trim();
+// Display user information on dashboard
+if (window.location.pathname.includes("dashboard.html")) {
+    const user = JSON.parse(localStorage.getItem("user"));
 
-  const user = users.find((u) => u.username === username && u.password === password);
+    if (user) {
+        document.getElementById("userName").textContent = user.name;
+        document.getElementById("userId").textContent = user.id;
+        document.getElementById("verify").textContent = user.verify;
+        document.getElementById("user-balance").textContent = user.blnc;
+        document.getElementById("wlcm").textContent = user.well;
+        document.getElementById("UserAgency").textContent = user.AppUser;
+        document.getElementById("App_SubAdmin").textContent = user.AppSubAdmin;
+        document.getElementById("App_Admin").textContent = user.AppAdmin;
+        document.getElementById("User-DP").src = user.Profile;
+        
+        
+    } else {
+        // Redirect back to login if no user sessiontc
+        window.location.href = "index.html";
+    }
+}
 
-  if (user) {
-    // Display user data
-    userName.textContent = user.name;
-    userEmail.textContent = user.email;
-    userverified.textContent = user.approve;
-    userAge.textContent = user.blnc;
-    userwel.textContent = user.well;
-    userad_min.textContent = user.addmin;
 
-    // Switch views
-    loginContainer.classList.add("hidden");
-    userDataContainer.classList.remove("hidden");
-    errorMsg.classList.add("hidden");
-  } else {
-    errorMsg.classList.remove("hidden");
-  }
+
+// Login function
+function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const errorMsg = document.getElementById("error-msg");
+    
+    const user = users.find(
+        (u) => u.id === username && u.password === password
+    );
+
+    if (user) {
+        // Save user session to local storage
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // Redirect to dashboard
+        window.location.href = "dashboard.html";
+    } else {
+      
+        errorMsg.classList.remove("hidden");
+    }   
+}
+
+// Logout function
+function logout() {
+    localStorage.removeItem("user");
+    window.location.href = "index.html";
+}
+
+const userApp_Admin= document.getElementById("App_Admin")
+
+
+
+
+userApp_Admin.addEventListener("click", () =>{
+  window.location.href = 'ahp.html';
 });
 
-// Logout functionality
-logoutBtn.addEventListener("click", () => {
-  // Clear input fields
-  usernameInput.value = "";
-  passwordInput.value = "";
-
-  // Switch views
-  loginContainer.classList.remove("hidden");
-  userDataContainer.classList.add("hidden");
-});
