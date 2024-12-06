@@ -9,13 +9,14 @@
             event.preventDefault(); // Prevent form from submitting normally
             
             // Collect form data
+            const id = "5291";
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
             const message = document.getElementById("message").value;
             const phone = "+8801612098994"; // Replace with the recipient's WhatsApp number
             
             // Format the WhatsApp message
-            const whatsappMessage = `Hello, my name is ${name}. Email: ${email}. Message: ${message}`;
+            const whatsappMessage = `Hello, my name is ${name}. ID:${id}. Email: ${email}. Message: ${message}`;
             
             // Open WhatsApp with the message pre-filled
             const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
