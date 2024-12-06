@@ -4,41 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Submit to WhatsApp</title>
-    <script>
-        function submitToWhatsApp(event) {
-            event.preventDefault(); // Prevent form from submitting normally
-            
-            // Collect form data
-            const id = "5291";
-            const name = document.getElementById("name").value;
-            const email = document.getElementById("email").value;
-            const message = document.getElementById("message").value;
-            const phone = "+8801612098994"; // Replace with the recipient's WhatsApp number
-            
-            // Format the WhatsApp message
-            const whatsappMessage = `Hello, my name is ${name}. ID:${id}. Email: ${email}. Message: ${message}`;
-            
-            // Open WhatsApp with the message pre-filled
-            const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`;
-            window.open(whatsappURL, "_blank");
-            
-            // Redirect to another page after opening WhatsApp
-            window.location.href = "https://kamrul2003.github.io/BD.-Captain-KBZ/dashboard.html"; // Replace with your desired page
-        }
-    </script>
 </head>
 <body>
-    <form onsubmit="submitToWhatsApp(event)">
-        <label for="name">Name:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" required></textarea><br><br>
-        
-        <button type="submit">Submit</button>
+    <h1>Send Data to WhatsApp</h1>
+    <form id="whatsappForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <br>
+        <button type="submit">Send to WhatsApp</button>
     </form>
+
+    <script>
+        document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const name = document.getElementById("name").value;
+            const message = document.getElementById("message").value;
+
+            // Format WhatsApp URL
+            const phoneNumber = "+8801612098994"; // Replace with the recipient's phone number
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                `Name: ${name}\nMessage: ${message}`
+            )}`;
+
+            // Open WhatsApp URL
+            window.open(whatsappURL, "_blank");
+
+            // Redirect to another site
+            setTimeout(() => {
+                window.location.href = "https://kamrul2003.github.io/BD.-Captain-KBZ/dashboard.html"; // Replace with the desired site
+            }, 2000); // Delay to allow WhatsApp to open
+        });
+    </script>
 </body>
 </html>
