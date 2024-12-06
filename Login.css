@@ -1,13 +1,13 @@
-. error {
-  color:red;
-}
-  h1 {
-    text-align: center;
-  }
-  .info {
-    text-align: center;
-  }
-.registeration-form {
+ body {
+   position: center;
+  margin-top: 0;
+  margin-left: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+} 
+  
+
+#login-container {display: one;
     width: 300px;
     padding: 30px;
     margin: 10% auto;
@@ -16,37 +16,32 @@
     border-radius: 8px;
 }
 
-.registeration-form h1,
-p {
+.hidden {
+ 
+  display: none;
+}
+
+#login-container h1,
+.p {
     text-align: center;
     margin: 5px 0;
     color: #0f0;
 }
 
-.registeration-form p:nth-child(2) {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
 
 
-.input{
-  border-radius: 5px;
-  color: indigo;
-  
-}
-
-.registeration-form input.input {
+#login-container input.input {
     width: 100%;
     height: 38px;
     padding-left: 10px;
     border: none;
     outline: none;
     margin: 10px 0;
+    border-radius: 5px;
+    color: indigo;
 }
 
-.registeration-form button {
-    width: px;
-    height: cm;
+#login-container button {
     font-size: 0.7cm;
     font-weight: 1000;
     outline: none;
@@ -57,7 +52,293 @@ p {
     border-radius: 11px;
     padding: 5px 10px;
 }
-.registeration-form button:hover {
+#login-container button:hover {
   background: green;
+  color: #fff;
+  border: 2px solid red;
+}
+
+#error-msg {
   color: red;
+  font-size: 20px;
+  margin-top: 10px;
+  background: #08080c70;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/*button desining*/
+.menu1 {
+  position: fixed;
+  bottom: -1%;
+  text-align: center;
+
+  .menubtn{
+    text-align: center;
+    font-size:20px;
+    font-weight: 1000;
+    height: 60px;
+    border-radius: 10px;
+  }
+  #btn1 {
+    margin-left: -0.5%;
+    padding-right: 50px;
+    padding-left: 21px;
+  }
+  #btn2 {
+    margin-left: -1.5%;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+  #btn3 {
+    margin-left: -1.5%;
+    padding-right: 41px;
+    padding-left: 60px;
+    color:#0f0;
+    background: blue;
+  }
+
+  .menubtn:hover {
+    color:#0f0;
+    background: blue;
+  }
+}
+.user-logo {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 3%;
+  top: 3%;
+}
+ .verify-tag {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      left: 25%;
+      top: 13%;
+      background: #002ff473;
+      border-radius: 10px;
+      padding: 
+    }
+ .verify{  
+   b {
+     position: absolute;
+     left: 27%;
+     top: 14%;
+     text-align: left;
+     background: #002ff473;
+     color: #fff;
+     padding-left: 25px;
+     padding-right: 8px;
+     border-radius: 10px;
+   }
+ }
+/* menu-setting*/
+.user-setting {
+  position: fixed;
+  right: -2%;
+  margin-top: 1%;
+  margin-right: 15px;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
+  background: #ffffff85;
+  border: 2px solid LimeGreen;
+  border-radius: 50px;
+}
+.n{
+    position: fixed;
+    right: 0;
+    margin-top: -52%;
+    margin-right: 10px;
+  .menu-setting{
+    padding-left: 30px;
+    position: fixed;
+    display: none;
+    right: 0;
+    margin-top: 0%;
+    margin-right: 10px;
+    font-weight: 1000;
+    background: indigo;
+    border: 2px solid #b7f400;
+    border-radius: 10px;
+    width: 220px;
+    color: #fff;
+    button{
+      font-size: 30px;
+    }
+  }
+}
+.n:hover {
+  .menu-setting{
+    display: inline-block;
+  }
+}
+
+.user-cover {
+  position: center;
+  width: 102%;
+  height: 200px;
+  background-image: url('cover-pic.png');
+  background-size: cover;
+}
+
+.user-name {
+ position: absolute;
+  left: 25%;
+  top: 3%;
+  background: ;
+  color: #fff;
+  #use{
+    margin-top: -15px;
+  }
+  #user-name{
+    display: block;
+    width: 215px;
+    height: 30px;
+    overflow: hidden;
+  }
+h2,b{
+  background: #002ff473;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+b {
+  position: absolute;
+  margin-top: -8px;
+}
+}
+
+
+.user-id {
+ position: absolute;
+  left: 25%;
+  top: 10%;
+  color: #fff;
+}
+
+.user-blnc {
+ position: absolute;
+  left: 5%;
+  top: 18%;
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #fff;
+  .blnc {
+    position: relative;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .cash {
+    position: relative;
+    color: #fff;
+    background-color: darkblue;
+    align-items: center;
+    left: 10px;
+    margin-top: -10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 80px;
+    height: 25px;
+    #s {
+      text-align: center;
+      margin-top: 3px;
+    }
+    #user-balance{
+      display: none;
+    }
+  }
+}
+.user-blnc:hover {
+  .cash {
+    text-align: center;
+    #s {
+      display: none;
+    }
+    #user-balance {
+      text-align: center;
+      margin-top: 3px;
+      display: inline-block;
+    }
+  }
+}
+
+
+.user-addmony {
+ position: absolute;
+  left: 35%;
+  top: 18%;
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #fff;
+  .blnc {
+    position: relative;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .cash {
+    position: relative;
+    color: #fff;
+    background-color: darkblue;
+    align-items: center;
+    left: 10px;
+    margin-top: -10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 80px;
+    height: 25px;
+    p {
+      text-align: center;
+      margin-top: 3px;
+    }
+  }
+}
+
+.user-cashout {
+ position: absolute;
+  left: 65%;
+  top: 18%;
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #fff;
+  .blnc {
+    position: relative;
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .cash {
+    position: relative;
+    color: #fff;
+    background-color: darkblue;
+    align-items: center;
+    left: 10px;
+    margin-top: -10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 80px;
+    height: 25px;
+    p {
+      text-align: center;
+      margin-top: 3px;
+    }
+  }
+}
+
+#Admin_pennal{
+  position: absolute;
+  margin-left: 20px;
+  margin-top: %;
+  background: green;
+  color: #fff;
+  backdrop-filter: lur(15px);
 }
