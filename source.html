@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source Page</title>
+</head>
+<body>
+    <p id="userId"></p>
+  
+    <br><br>
+    <p id="userName"></p>
+    <button onclick="sendData()">Send to Another Page</button>
+
+   <script>
+      if (window.location.pathname.includes("source.html")) {
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (user){
+      document.getElementById("userName").textContent = user.password;
+        document.getElementById("userId").textContent = user.id;
+    }
+    }
+   </script>
+</body>
+</html>
