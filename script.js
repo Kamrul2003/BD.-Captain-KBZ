@@ -69,3 +69,24 @@ userApp_Admin.addEventListener("click", () =>{
   window.location.href = 'ahp.html';
 });
 
+
+
+
+function sendDataBtn() {
+    const username = document.getElementById("userName").innerText;
+    const userId = document.getElementById("userId").innerText;
+    const errorMsg = document.getElementById("error-msg");
+    
+    const user = users.find(
+        (u) => u.name === username && u.id === userId
+    );
+
+    if (user) {
+        // Save user session to local storage
+        localStorage.setItem("user", JSON.stringify(user));
+
+        // Redirect to dashboard
+        window.location.href = "source.html";
+    } }
+    
+   
