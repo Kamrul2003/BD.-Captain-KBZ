@@ -22,13 +22,14 @@
             e.preventDefault();
 
             // Get form data
+            const app = "STARMAKER";
             const name = document.getElementById("name").value;
             const message = document.getElementById("message").value;
 
             // Format WhatsApp URL
             const phoneNumber = "+8801612098994"; // Replace with the recipient's phone number
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-                `Name: ${name}\nMessage: ${message}`
+                `${app} Name: ${name}\nMessage: ${message}`
             )}`;
 
             // Open WhatsApp URL
