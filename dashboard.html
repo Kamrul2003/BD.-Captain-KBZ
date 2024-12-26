@@ -18,10 +18,10 @@
           <img class="user-logo" id="User-DP" >
           <div class="verify"><b id="verify"></b>
           </div>
-          <img class="verify-tag" src="7.png">
+          <img class="verify-tag" src="verify-tag.png">
           <div class="user-name">
              <h2><span id="userName"></span></h2>
-             <b id="use">ID: <span id="userId"></span></b>
+             <b id="use">ID: <span class="hdden" id="userId"></span></b>
           </div>
           
            <!.. User Balance & Withdrow System ..>
@@ -46,29 +46,33 @@
                
                <h1 id="App_Admin"></h1>
                <h1 id="App_SubAdmin"></h1>
-               <h1 id="UserAgency"></h1>
            </div>
             <!..Setting Designing ..>
             <div class="n">
               <img class="user-setting" src="setting.png">
               <div class="menu-setting">
-                <p>Name: ********</p>
-                <p>ID: ********</p>
-                <p>Name: ********</p>
-                <p>ID: ********</p>
-                <p>Name: ********</p>
-                <p>ID: ********</p>
-                <p>Name: ********</p>
-                <p>ID: ********</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
+                <p>.</p>
                 <button onclick="logout()">Logout</button>
               </div>
             </div>
       </div>
       
     
-    
+     <!.....  Menu   button....>
+    <div class="menu1">
+      <button  onclick="openAgency(this)"  id="btn1"class="menubtn" >Agency</button>
+      <button onclick="openMenu(this)"  id="btn2"class="menubtn">Home</button>
+      <button onclick="openMe(this)"  id="btn3"class="menubtn">Me</button>
+    </div>
     
    
-   <script src="script.js"></script>
+   <script src="dashboard.js"></script>
   </body>
 </html>
