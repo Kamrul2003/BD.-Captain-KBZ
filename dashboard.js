@@ -20,26 +20,13 @@ function logout() {
     localStorage.removeItem("user");
     window.location.href = "Login.html";
 }
-
+ // JavaScript to handle the navigation
 function openAgency() {
-    localStorage.removeItem("user");
     window.location.href = "Shopping.html";
 }
-
-      // JavaScript to handle the navigation
-    document.getElementById('btn1').addEventListener('click', function () {
-      // Redirect to second.html
-      window.location.href = 'Shopping.html';
-    });
-    
-    // JavaScript to handle the navigation
-    document.getElementById('btn2').addEventListener('click', function openMenu() {
-      // Redirect to second.html
-      window.location.href = "index.html";
-    });
-    
-     // JavaScript to handle the navigation
-    document.getElementById('btn3').addEventListener('click', function () {
-      // Redirect to second.html
+   function openMenu() {
+    window.location.href = "index.html";
+} 
+    function openMe() {
       window.location.href = 'dashboard.html';
-    });
+    }
