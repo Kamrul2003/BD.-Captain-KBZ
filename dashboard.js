@@ -30,7 +30,7 @@ function logout() {
     // JavaScript to handle the navigation
     document.getElementById('btn2').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'ahp.html';
+      window.location.href = 'index.html';
     });
     
      // JavaScript to handle the navigation
