@@ -20,7 +20,7 @@ function logout() {
     localStorage.removeItem("user");
     window.location.href = "Login.html";
 }
- // JavaScript to handle the navigation
+
 function openAgency() {
     window.location.href = "Shopping.html";
 }
