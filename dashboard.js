@@ -21,7 +21,7 @@ function logout() {
     window.location.href = "Login.html";
 }
 
-  // JavaScript to handle the navigation
+      // JavaScript to handle the navigation
     document.getElementById('btn1').addEventListener('click', function () {
       // Redirect to second.html
       window.location.href = 'Shopping.html';
@@ -30,11 +30,11 @@ function logout() {
     // JavaScript to handle the navigation
     document.getElementById('btn2').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'index.html';
+      window.location.href = 'Index.html';
     });
     
      // JavaScript to handle the navigation
     document.getElementById('btn3').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'Shopping.html';
+      window.location.href = 'dashboard.html';
     });
