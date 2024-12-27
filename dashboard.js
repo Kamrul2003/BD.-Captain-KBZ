@@ -25,7 +25,7 @@ function openAgency() {
     window.location.href = "Shopping.html";
 }
    function openMenu() {
-    window.location.href = "index.html";
+    window.location.href = "Index.html";
 } 
     function openMe() {
       window.location.href = 'dashboard.html';
