@@ -24,7 +24,7 @@ function logout() {
   // JavaScript to handle the navigation
     document.getElementById('btn1').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'Agency.html';
+      window.location.href = 'Shopping.html';
     });
     
     // JavaScript to handle the navigation
@@ -36,5 +36,5 @@ function logout() {
      // JavaScript to handle the navigation
     document.getElementById('btn3').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'me-up.html';
+      window.location.href = 'Shopping.html';
     });
