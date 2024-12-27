@@ -21,6 +21,11 @@ function logout() {
     window.location.href = "Login.html";
 }
 
+function openAgency() {
+    localStorage.removeItem("user");
+    window.location.href = "Shopping.html";
+}
+
       // JavaScript to handle the navigation
     document.getElementById('btn1').addEventListener('click', function () {
       // Redirect to second.html
@@ -30,7 +35,7 @@ function logout() {
     // JavaScript to handle the navigation
     document.getElementById('btn2').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'Index.html';
+      window.location.href = "index.html";
     });
     
      // JavaScript to handle the navigation
