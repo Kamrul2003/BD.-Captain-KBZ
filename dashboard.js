@@ -33,7 +33,7 @@ function openAgency() {
     });
     
     // JavaScript to handle the navigation
-    document.getElementById('btn2').addEventListener('click', function () {
+    document.getElementById('btn2').addEventListener('click', function openMenu() {
       // Redirect to second.html
       window.location.href = "index.html";
     });
