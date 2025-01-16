@@ -11,26 +11,29 @@
     
         <div class="user-cover"><div id="gep"><br><br></div>
            <!.. User Finde System ..>
-           <form> <div id="error-msg" class="hidden" style="text-align: center; display: none; background: #fff; color: red; font-size: 30px;">অর্ডার/স্টাইল ভুল হয়েছে</div></form>
+           <form> <div id="error-msg1" class="hidden" style="margin-top: 7px; margin-bottom: 7px;  text-align: center; display: none; background: #6104f7; color: red; font-size: 30px;">এই অর্ডার খুজে পাওয়া যায়নি</div></form>
+           <form> <div id="error-msg2" class="hidden" style="margin-top: 7px; margin-bottom: 7px;  text-align: center; display: none; background: #7008f7; color: red; font-size: 30px;">এই স্টাইল খুজে পাওয়া যায়নি</div></form>
           <div class="userFindeDiv">
              <p class="title">Enter ➪ Order OR STYLE</p> 
-             <div class="inputDiv"><input type="number" id="inputFiald" placeholder="Enter Order number" required=""></div> <br>
+               <div class="inputDiv">
+                  <input type="tel" id="inputFiald" placeholder="Enter Order number" required>
+               </div> <br>
              <button onclick="searchOrder()" class="fBtn">FINDE ORDER</button>
-             <button onclick="searchOrder()" class="fBtn">FINDE STYLE</button>
+             <button onclick="searchStyle()" class="fBtn">FINDE STYLE</button>
           </div>
         </div>
           <br>
           <div class="view"><br>
             <div class="title">1. ORDER ➺ NUMBER.
-               <input type="tel" id="O/N" class="data">
+               <input type="tel" id="order" class="data">
             </div> 
             <br><br><br><br><br>
             <div class="title">2. STYLE ➺ NAME/NUMBER.
-               <input type="text" class="data">
+               <input type="text" id="style" class="data">
             </div> 
             <br><br><br><br><br>
             <div class="title">3. COLOR ➺ CODE/NAME.
-               <input type="text" class="data">
+               <input type="text" id="color"  class="data">
             </div> 
             <br><br><br><br><br>
             <div class="title">4. JOB ➺ NUMBER.
@@ -64,29 +67,85 @@
       <button onclick="openMe(this)"  id="btn3"class="menubtn">HOME</button><br>
     </div>
     
-   
-          <script> function searchOrder(){
-          const order = document.getElementById("inputFiald").value;
-          const errorMsg = document.getElementById("error-msg");
-          const gep = document.getElementById("gep");
-          const on = '2';
-          const ORDER = '291323-1636, 475465-D, 291324-2032, 345765-6476, 657675-6586.';
-          
-          const user = (order == on);
-          if (user) {
-            document.getElementById("O/N").value = ORDER;
-            errorMsg.style.display = "none";
+   <script>
+     
+     // JavaScript to handle the navigation
+    document.getElementById('btn1').addEventListener('click', function () {
+      // Redirect to second.html
+      window.location.href = 'dashboard.html';
+    });
+    
+    // JavaScript to handle the navigation
+    document.getElementById('btn2').addEventListener('click', function () {
+      // Redirect to second.html
+      window.location.href = 'dashboard.html';
+    });
+    
+     // JavaScript to handle the navigation
+    document.getElementById('btn3').addEventListener('click', function () {
+      // Redirect to second.html
+      window.location.href = 'index.html';
+    });
+    
+    async function searchOrder() {
+      const id = document.getElementById('inputFiald').value;
+      const gep = document.getElementById('gep');
+      const errorMsg1 = document.getElementById("error-msg1");
+      const errorMsg2 = document.getElementById("error-msg2");
+
+      const response = await fetch(' https://script.google.com/macros/s/AKfycbxf_Cm1DLMR4FQPNInPhxrA1W6FV9i8830Z_0CO93v_E0SdPZ6Vu3XIRb48yDJTaGT-/exec');
+      const users = await response.json();
+
+      const user = users.find(u => u.id == id);
+
+         if (user) {
+            document.getElementById('order').value = user.order;
+            document.getElementById('style').value = user.style;
+            document.getElementById('color').value = user.color;
+            document.getElementById('job').value = user.job;
+            document.getElementById('qty').value = user.qty;
+            document.getElementById('date').value = user.date;
+            document.getElementById('unit').value = user.unit;
+            errorMsg1.style.display = "none";
+            errorMsg2.style.display = "none";
             gep.style.display = "block";
-          } else {
-               errorMsg.style.display = "block";
-               gep.style.display = "none";
-              //  alert('Invalid email or password');
+         } else {
+            errorMsg1.style.display = "block";
+            errorMsg2.style.display = "none";
+            gep.style.display = "none";
+             //  alert('Invalid email or password');
             }
-          }
-          
-          
-          
-          </script>
-   <script src="dashboard.js"></script>
+      }
+      
+      async function searchStyle() {
+      const id = document.getElementById('inputFiald').value;
+      const gep = document.getElementById('gep');
+      const errorMsg1 = document.getElementById("error-msg1");
+      const errorMsg2 = document.getElementById("error-msg2");
+
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxf_Cm1DLMR4FQPNInPhxrA1W6FV9i8830Z_0CO93v_E0SdPZ6Vu3XIRb48yDJTaGT-/exec ');
+      const users = await response.json();
+
+      const user = users.find(u => u.style == id);
+
+         if (user) {
+            document.getElementById('order').value = user.order;
+            document.getElementById('style').value = user.style;
+            document.getElementById('color').value = user.color;
+            document.getElementById('job').value = user.job;
+            document.getElementById('qty').value = user.qty;
+            document.getElementById('date').value = user.date;
+            document.getElementById('unit').value = user.unit;
+            errorMsg1.style.display = "none";
+            errorMsg2.style.display = "none";
+            gep.style.display = "block";
+         } else {
+            errorMsg2.style.display = "block";
+            errorMsg1.style.display = "none";
+            gep.style.display = "none";
+             //  alert('Invalid email or password');
+            }
+      }
+      </script>
   </body>
 </html>
