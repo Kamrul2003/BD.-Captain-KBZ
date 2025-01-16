@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> user signup Page </title>
+    
+    <link rel="stylesheet" type="text/css" href="dashboard.css"/>
+  
+  </head> 
+  <body>
+    
+        <div class="user-cover"><br><br>
+           <!.. User Finde System ..>
+          <div class="userFindeDiv">
+             <p class="title">Enter ➪ Order OR STYLE</p> 
+             <div class="inputDiv">
+               <form onsubmit="handleSubmit(event)" class="registeration-form">
+                  <input type="number" name="id" id="id" placeholder="Enter Order number" required>
+                 </div> <br><br>
+                  <button type="submit" class="fBtn">CREAT ORDER</button>
+          </div>
+        </div>
+          <br><br><br><br><br>
+          <div class="view"><br>
+            <div class="title">1. ORDER ➺ NUMBER.
+               <input type="text" name="order" class="data" required>
+            </div> 
+            <br><br><br><br><br>
+            <div class="title">2. STYLE ➺ NAME/NUMBER.
+               <input type="text" name="style" class="data" required>
+            </div> 
+            <br><br><br><br><br>
+            <div class="title">3. COLOR ➺ CODE/NAME.
+               <input type="text" name="color" class="data" required>
+            </div> 
+            <br><br><br><br><br>
+            <div class="title">4. JOB ➺ NUMBER.
+               <input type="tel" name="job" class="data" required>
+            </div> 
+            <br><br><br><br><br>
+            <div class="title">5. ORDER ➺ QUANTITY.
+               <input type="text" name="qty" class="data" required>
+            </div> 
+            <br><br><br><br><br>
+            <div class="title">6. RECIVE ➺ DATE.
+               <input type="date" name="date" class="data" required>
+            </div> 
+            <br><br><br><br><br>
+            <div class="title">7. ORDER ➺ UNIT.
+               <input type="text" name="unit" class="data" required>
+            </div> 
+            <div style="height: 100px; margin-top:40%; color:#fff;">gfkhgjjfh</div>
+          </div> </form>
+          
+           
+            
+      <div class="Agency">APP OWNER SIAM.</div>
+    
+    
+    
+     <!.....  Menu   button....>
+    <div class="menu1">
+      <button id="btn1"class="menubtn" >VIEW ALL ORDERS</button>
+      <button id="btn2"class="menubtn">HOME</button><br>
+      <button id="btn3"class="menubtn">ADD AN ORDER</button><br>
+    </div>
+    
+   
+          <script>
+            
+    // JavaScript to handle the navigation
+    document.getElementById('btn1').addEventListener('click', function () {
+      // Redirect to second.html
+      window.location.href = 'dashboard.html';
+    });
+    
+    // JavaScript to handle the navigation
+    document.getElementById('btn2').addEventListener('click', function () {
+      // Redirect to second.html
+      window.location.href = 'index.html';
+    });
+    
+     // JavaScript to handle the navigation
+    document.getElementById('btn3').addEventListener('click', function () {
+      // Redirect to second.html
+      window.location.href = 'dashboard.html';
+    });
+            
+            async function handleSubmit(event) {
+            event.preventDefault(); // Prevent form from reloading the page
+
+            // Collect form data
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Google Apps Script Web App URL
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxf_Cm1DLMR4FQPNInPhxrA1W6FV9i8830Z_0CO93v_E0SdPZ6Vu3XIRb48yDJTaGT-/exec';
+
+            // Send the form data to Google Sheets
+            try {
+                const response = await fetch(scriptURL, { method: 'POST', body: formData });
+                if (response.ok) {
+                    // Redirect to another page
+                    window.location.href = 'dashboard.html'; // Change to your success page URL
+                } else {
+                    alert('Error submitting form. Please try again.');
+                }
+            } catch (error) {
+                alert('There was an error: ' + error.message);
+            }
+        }
+          </script>
+  </body>
+</html>
