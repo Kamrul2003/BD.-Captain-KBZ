@@ -74,7 +74,7 @@
     // JavaScript to handle the navigation
     document.getElementById('btn1').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'dashboard.html';
+      window.location.href = 'Execution-log.htm';
     });
     
     // JavaScript to handle the navigation
@@ -86,7 +86,7 @@
      // JavaScript to handle the navigation
     document.getElementById('btn3').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'dashboard.html';
+      window.location.href = 'ADMIN-PANEL.html';
     });
             
             async function handleSubmit(event) {
@@ -104,7 +104,7 @@
                 const response = await fetch(scriptURL, { method: 'POST', body: formData });
                 if (response.ok) {
                     // Redirect to another page
-                    window.location.href = 'dashboard.html'; // Change to your success page URL
+                     alert('ORDER CREATED SUCCESEFULL OK.'); // Change to your success page URL
                 } else {
                     alert('Error submitting form. Please try again.');
                 }
