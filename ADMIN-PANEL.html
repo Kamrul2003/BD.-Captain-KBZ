@@ -11,21 +11,21 @@
   </head> 
   <body>
     
-        <div class="user-cover"><br><br>
+        <div class="user-cover"><br>
            <!.. User Finde System ..>
           <div class="userFindeDiv">
              <p class="title">Enter ➪ Order OR STYLE</p> 
              <div class="inputDiv">
-               <form onsubmit="handleSubmit(event)" class="registeration-form">
-                  <input type="number" name="id" id="id" placeholder="Enter Order number" required>
-                 </div> <br><br>
-                  <button type="submit" class="fBtn">CREAT ORDER</button>
+     <form onsubmit="handleSubmit(event)" class="registeration-form">
+                  <input type="text" name="id" id="id" placeholder="Enter Order number" required>
+                 </div> <br>
+                 <div  class="fbtn"> <button type="submit" class="fBtn1">CREAT ORDER</button></div>
           </div>
         </div>
-          <br><br><br><br><br>
+         
           <div class="view"><br>
             <div class="title">1. ORDER ➺ NUMBER.
-               <input type="text" name="order" class="data" required>
+               <input type="text" name="order"   class="data" required>
             </div> 
             <br><br><br><br><br>
             <div class="title">2. STYLE ➺ NAME/NUMBER.
@@ -33,15 +33,15 @@
             </div> 
             <br><br><br><br><br>
             <div class="title">3. COLOR ➺ CODE/NAME.
-               <input type="text" name="color" class="data" required>
+               <input type="text" name="color"  class="data" required>
             </div> 
             <br><br><br><br><br>
             <div class="title">4. JOB ➺ NUMBER.
-               <input type="tel" name="job" class="data" required>
+               <input type="tel" name="job"  class="data" required>
             </div> 
             <br><br><br><br><br>
             <div class="title">5. ORDER ➺ QUANTITY.
-               <input type="text" name="qty" class="data" required>
+               <input type="text" name="qty"  class="data" required>
             </div> 
             <br><br><br><br><br>
             <div class="title">6. RECIVE ➺ DATE.
@@ -52,7 +52,8 @@
                <input type="text" name="unit" class="data" required>
             </div> 
             <div style="height: 100px; margin-top:40%; color:#fff;">gfkhgjjfh</div>
-          </div> </form>
+          </div>
+    </form>
           
            
             
@@ -73,7 +74,7 @@
     // JavaScript to handle the navigation
     document.getElementById('btn1').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'Execution-log.html';
+      window.location.href = 'dashboard.html';
     });
     
     // JavaScript to handle the navigation
@@ -85,7 +86,7 @@
      // JavaScript to handle the navigation
     document.getElementById('btn3').addEventListener('click', function () {
       // Redirect to second.html
-      window.location.href = 'ADMIN-PANEL.html';
+      window.location.href = 'dashboard.html';
     });
             
             async function handleSubmit(event) {
@@ -111,6 +112,69 @@
                 alert('There was an error: ' + error.message);
             }
         }
+
+
+
+
+        async function searchOrder() {
+      const id = document.getElementById('inputFiald').value;
+      const gep = document.getElementById('gep');
+      const errorMsg1 = document.getElementById("error-msg1");
+      const errorMsg2 = document.getElementById("error-msg2");
+
+      const response = await fetch(' https://script.google.com/macros/s/AKfycbxf_Cm1DLMR4FQPNInPhxrA1W6FV9i8830Z_0CO93v_E0SdPZ6Vu3XIRb48yDJTaGT-/exec');
+      const users = await response.json();
+
+      const user = users.find(u => u.id == id);
+
+         if (user) {
+            document.getElementById('order').value = user.order;
+            document.getElementById('style').value = user.style;
+            document.getElementById('color').value = user.color;
+            document.getElementById('job').value = user.job;
+            document.getElementById('qty').value = user.qty;
+            document.getElementById('date').value = user.date;
+            document.getElementById('unit').value = user.unit;
+            errorMsg1.style.display = "none";
+            errorMsg2.style.display = "none";
+            gep.style.display = "block";
+         } else {
+            errorMsg1.style.display = "block";
+            errorMsg2.style.display = "none";
+            gep.style.display = "none";
+             //  alert('Invalid email or password');
+            }
+      }
+      
+      async function searchStyle() {
+      const id = document.getElementById('inputFiald').value;
+      const gep = document.getElementById('gep');
+      const errorMsg1 = document.getElementById("error-msg1");
+      const errorMsg2 = document.getElementById("error-msg2");
+
+      const response = await fetch('https://script.google.com/macros/s/AKfycbxf_Cm1DLMR4FQPNInPhxrA1W6FV9i8830Z_0CO93v_E0SdPZ6Vu3XIRb48yDJTaGT-/exec ');
+      const users = await response.json();
+
+      const user = users.find(u => u.style == id);
+
+         if (user) {
+            document.getElementById('order').value = user.order;
+            document.getElementById('style').value = user.style;
+            document.getElementById('color').value = user.color;
+            document.getElementById('job').value = user.job;
+            document.getElementById('qty').value = user.qty;
+            document.getElementById('date').value = user.date;
+            document.getElementById('unit').value = user.unit;
+            errorMsg1.style.display = "none";
+            errorMsg2.style.display = "none";
+            gep.style.display = "block";
+         } else {
+            errorMsg2.style.display = "block";
+            errorMsg1.style.display = "none";
+            gep.style.display = "none";
+             //  alert('Invalid email or password');
+            }
+      }
           </script>
   </body>
 </html>
