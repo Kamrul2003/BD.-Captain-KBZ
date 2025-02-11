@@ -144,7 +144,7 @@ button:hover{
     font-size:20px;
     font-weight: 1000;
     height: 60px;
-    width: 180px;
+    width: 175px;
     border-radius: 10px;
     background: lightGreen;
     color: indigo;
@@ -188,7 +188,7 @@ button:hover{
     text-shadow: 4px 4px 6px blue;
   }po{
     position: absolute;
-    bottom: 7%;
+    bottom: 15%;
     left: 20%;
     font-weight: 1000;
     font-size: 0.5cm;
