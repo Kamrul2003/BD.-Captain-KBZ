@@ -187,11 +187,16 @@ button:hover{
     color: #fff;
     text-shadow: 4px 4px 6px blue;
   }po{
-    position: absolute;
-    bottom: 7%;
+    position: fixed;
+    bottom: 15%;
     left: 20%;
     font-weight: 1000;
     font-size: 0.5cm;
+    padding: 6px;
+    border-radius: 5px;
+    background: linear-gradient(45deg,
+    #ff0000, #ff7300, #fffb00, #48ff00, 
+    #00ffff, #0028ff, #ff00c8, #ff0000, #90f);
     color: #fff;
     text-shadow: 4px 4px 6px blue;
   }
