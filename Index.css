@@ -132,33 +132,47 @@ button:hover{
     }
   }
 
-/*button desining*/
+/* menu button design */
 .menu1 {
   position: fixed;
-  bottom: 0%;
   justify-items: center;
+  bottom: 0;
   text-align: center;
-
+  width: 100%;
+  background: #fff;
+  border: 2px solid #0f0;
+  color: blue;
+  border-radius: 10px 10px 0px 0px;
+  margin: 0;
   .menubtn{
+    position: relative;
     text-align: center;
     font-size:20px;
     font-weight: 1000;
     height: 60px;
-    width: 185px;
-    border-radius: 10px;
-    background: lightGreen;
-    color: indigo;
+    width: 33.3%;border: none;
+  }
+  #btn1 {
+    border-radius: 10px 0px 0px 0px;
+    margin-right: -0.5%;
+  }
+  #btn2 {
+    margin-left: -0.5%;
+    margin-right: -0.5%;
+    color:#0f0;
+    background: blue;
   }
   #btn3 {
+    border-radius: 0px 10px 0px 0px;
+    margin-left: -0.5%;
+  }
+
+  .menubtn:hover {
     color:#0f0;
     background: blue;
-    width: 385px;
   }
-button:hover{
-    color:#0f0;
-    background: blue;
-  }
-}
+     }
+
  .UFE{
    position: fixed;
    justify-items: center;
