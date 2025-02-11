@@ -8,17 +8,18 @@
   
 .Agency {
    position: fixed;
-   margin-top: -6%;
+   justify-items: center;
+   text-align:center;
+   top: 0;
    margin-left: 0;
    padding-top: 10px;
-   border-bottom: 5px solid red;
-   justify-items: center;
-   width: 385px;
-   text-align:center;
+   width: 100%;
    font-weight:1000; 
+   font-size:1cm;
+   border-bottom: 5px solid red;
+   border-radius: 0px 0px 10px 10px;
    text-shadow:2px 1px 3px blue; 
    background: #b7f400;
-   font-size:1cm;
 }
 
 .user-cover {
